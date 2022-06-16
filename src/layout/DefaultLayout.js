@@ -4,6 +4,7 @@ import React from 'react';
 import HeaderComponent from './partials/HeaderComponent';
 import FooterComponent from './partials/FooterComponent';
 // End import components
+// anther comment to commit
 
 const DefaultLayout = ({children}) => {
   return (
