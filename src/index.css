@@ -17,3 +17,7 @@ code {
   padding: 1.25rem;
   border-radius: .4rem;
 }
+
+.logo-image{
+  filter:invert(95%);
+}
