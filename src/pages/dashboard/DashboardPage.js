@@ -31,14 +31,14 @@ const DashboardPage = () => {
           <div>Pending Tickets: 5</div>
         </Col>
       </Row>
-      <Row>+
+      <Row>
         <Col className='text-center mb-2'>
-          Recently added tickets
+          <h4>Recently added tickets</h4>
         </Col>
       </Row>
       <hr/>
       <Row>
-        <Col className='recent-tcket'>
+        <Col className='recent-tcket mb-4'>
           <TicketTable tickets={dummyTickets}/>
         </Col>
       </Row>
