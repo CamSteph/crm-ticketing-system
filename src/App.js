@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 // Page imports
 import EntryPage from "./pages/entry/EntryPage";
+import DashboardPage from "./pages/dashboard/DashboardPage";
 // End Page imports
 
 // Import components
@@ -17,7 +18,7 @@ function App() {
     <div className="App">
       {/* <EntryPage/> */}
       <DefaultLayout>
-        Some new text, broski.
+        <DashboardPage/>
       </DefaultLayout>
     </div>
   );
