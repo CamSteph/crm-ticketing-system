@@ -5,6 +5,7 @@ import {Container, Row, Col, Button} from 'react-bootstrap';
 
 // Import Components
 import TicketTable from '../../components/ticketTable/TicketTable';
+import PageBreadcrumb from '../../components/breadcrumb/PageBreadcrumb';
 // End Import Components
 
 // Import dummy data
@@ -14,6 +15,11 @@ import dummyTickets from '../../assets/data/dummyTickets.json';
 const DashboardPage = () => {
   return (
     <Container>
+      <Row>
+        <Col>
+          <PageBreadcrumb page="Dashboard"/>
+        </Col>
+      </Row>
       <Row>
         <Col className='text-center mt-5 mb-2'>
           <Button variant="primary" style={{'font-size':'1.5rem', 'padding':'10px 20px', 'color':'#fff'}}>Add New Ticket</Button>
