@@ -4,6 +4,7 @@ import "./App.css";
 import EntryPage from "./pages/entry/EntryPage";
 import DashboardPage from "./pages/dashboard/DashboardPage";
 import AddNewTicketPage from "./pages/addNewTickets/AddNewTicketPage";
+import TicketListPage from "./pages/ticketList/TicketListPage";
 // End Page imports
 
 // Import components
@@ -16,7 +17,8 @@ function App() {
       {/* <EntryPage/> */}
       <DefaultLayout>
         {/* <DashboardPage/> */}
-        <AddNewTicketPage/>
+        {/* <AddNewTicketPage/> */}
+        <TicketListPage/>
       </DefaultLayout>
     </div>
   );
