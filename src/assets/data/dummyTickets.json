@@ -3,7 +3,24 @@
         "id": 1,
         "subject": "Site has strange redirects.",
         "status" : "Client response pending",
-        "addedAt" : "2022-05-23"
+        "addedAt" : "2022-05-23",
+        "history": [
+            {
+                "date": "05-15-2022",
+                "message": "This is a message",
+                "messageBy": "Cameron S."
+            },
+            {
+                "date": "05-15-2022",
+                "message": "This is another message",
+                "messageBy": "Cameron S."
+            },
+            {
+                "date": "05-15-2022",
+                "message": "This is the last message",
+                "messageBy": "Cameron S."
+            }
+        ]
     },
     {
         "id": 2,
