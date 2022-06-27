@@ -2,8 +2,8 @@ import React from 'react';
 import "./messageHistory.css";
 
 const MessageHistoryComponent = ({message}) => {
-    console.log(message)
-    return (message.map((row, i) => {
+    //console.log(message)
+    return (message && message.map((row, i) => {
             return (
                 <div className="message-history mt-3" id={i}>
                 <div className="send fw-bold mt-3">

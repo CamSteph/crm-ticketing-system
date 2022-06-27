@@ -14,6 +14,8 @@ import TicketTable from '../../components/ticketTable/TicketTable';
 import tickets from '../../assets/data/dummyTickets.json';
 // End import dummy ticket data
 
+import { Link } from 'react-router-dom';
+
 const TicketListPage = () => {
     const [strValue, setStrValue] = useState('');
     const [filteredTickets, setFilteredTickets] = useState(tickets);
@@ -45,7 +47,7 @@ const TicketListPage = () => {
         </Row>
         <Row className="mt-4">
             <Col>
-                <Button variant="primary" className="text-white">Add New Ticket</Button>
+            <Link to='/add-ticket'><Button variant="primary" className="text-white">Add New Ticket</Button></Link>
             </Col>
             <Col className='text-right'>
                 <SearchFormComponent handleOnChange={handleOnChange} strValue={strValue}/>

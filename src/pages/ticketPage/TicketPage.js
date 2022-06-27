@@ -13,15 +13,24 @@ import TicketReplyComponent from '../../components/ticketReplySection/TicketRepl
 import tickets from '../../assets/data/dummyTickets.json';
 // End import tickets
 
-const ticket = tickets[0];
+import { useParams } from 'react-router-dom';
+
+//const ticket = tickets[0];
 
 const TicketPage = () => {
 
+    const {tID} = useParams();
     const [messageContent, setMessageContent] = useState('');
+    const [ticket, setTicket] = useState('');
 
     useEffect(() => {
-
-    }, [messageContent]);
+        for(let i = 0; i < tickets.length; i++){
+            if(tickets[i].id == tID){
+                setTicket(tickets[i]);
+                continue;
+            }
+        }
+    }, [messageContent, tID]);
 
     const handleOnChange = e => {
         const {val} = e.target.value;
@@ -42,12 +51,12 @@ const TicketPage = () => {
         </Row>
         <Row>
             <Col>
-                <div className="subject"><b>Subject:</b> {ticket.subject}</div>
-                <div className="date"><b>Ticket Creation:</b> {ticket.addedAt}</div>
-                <div className="status"><b>Status:</b> {ticket.status}</div>
+                <div className="subject"><b>{tID}<br/> Subject:</b> {ticket && ticket.subject}</div>
+                <div className="date"><b>Ticket Creation:</b> {ticket && ticket.addedAt}</div>
+                <div className="status"><b>Status:</b> {ticket && ticket.status}</div>
             </Col>
-            <Col>
-                <Button variant="outline-primary" className="fw-bold">Close Ticket</Button>
+            <Col className='text-right'>
+                <Button variant="outline-primary" className="fw-bold text-right">Close Ticket</Button>
             </Col>
         </Row>
         <Row className='mt-4'>
